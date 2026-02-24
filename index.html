@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madurasa 2026 - The Hive of Growth Strategic Hub</title>
+    <title>Madurasa 2026 - Strategic Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
@@ -62,18 +62,19 @@
         }
 
         .nav-logos { display: flex; align-items: center; gap: 15px; }
-        .divider { width: 1px; height: 24px; background: #DDD; }
-        .logo-am { height: 14px; opacity: 0.8; }
+        .logo-am { height: 14px; opacity: 0.9; }
         .logo-brand { height: 45px; }
         .logo-agency { height: 32px; border-radius: 4px; }
+        .divider { width: 1px; height: 24px; background: #DDD; }
 
         .nav-links { display: flex; gap: 15px; }
-        .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
+        .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
         .nav-links a:hover { background: var(--cream); color: var(--honey-orange); }
 
         /* HERO */
         .hero { text-align: center; padding: 160px 8% 80px 8%; background: radial-gradient(circle at center, #FFF, var(--cream)); position: relative; }
-        .hero h1 { font-size: 4.5rem; font-family: 'Poppins', sans-serif; line-height: 1; color: var(--navy); margin-bottom: 20px; }
+        .hero h4 { color: var(--honey-gold); letter-spacing: 10px; font-weight: 800; font-size: 14px; margin-bottom: 10px; text-transform: uppercase; }
+        .hero h1 { font-size: 4.5rem; font-family: 'Poppins', sans-serif; line-height: 1.1; color: var(--navy); margin-bottom: 15px; }
         .hero .highlight { color: var(--honey-orange); }
         .honey-blob { position: absolute; background: var(--honey-gold); filter: blur(80px); opacity: 0.15; z-index: -1; border-radius: 50%; }
 
@@ -82,63 +83,68 @@
         .section-title { font-family: 'Poppins', sans-serif; font-size: 32px; color: var(--navy); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; display: inline-block; position: relative; }
         .section-title::after { content: ''; display: block; width: 60px; height: 6px; background: var(--honey-gold); border-radius: 3px; margin-top: 10px; }
 
-        /* AUDIT BOARD */
-        .audit-board { background: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #F0F0F0; }
-        .platform-split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .rival-box h4 { font-size: 16px; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; color: var(--navy); }
-        .bar-row { margin-bottom: 20px; }
-        .bar-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 700; color: var(--text); }
-        .bar-track { height: 35px; background: #F5F5F5; border-radius: 20px; overflow: hidden; }
-        .bar-fill { height: 100%; border-radius: 20px; display: flex; align-items: center; justify-content: flex-end; padding-right: 15px; color: white; font-weight: 800; font-size: 12px; transition: width 1.5s ease; }
+        /* DATA BOARD & RANKING */
+        .dashboard-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; margin-top: 20px; }
+        .rank-card { background: white; padding: 30px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #F0F0F0; height: 100%; }
+        .rank-card h3 { font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+        
+        .rank-list { list-style: none; }
+        .rank-item { display: flex; justify-content: space-between; padding: 12px 15px; border-bottom: 1px solid #F5F5F5; font-size: 14px; align-items: center; transition: 0.3s; }
+        .rank-item:hover { background: #fafafa; }
+        .rank-item.official { background: var(--cream); border-radius: 12px; margin: 8px 0; border: 2px solid var(--honey-gold); font-weight: 800; color: var(--navy); transform: scale(1.02); }
+        .rank-num { width: 28px; height: 28px; background: #EEE; color: #555; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; }
+        .rank-item.official .rank-num { background: var(--honey-gold); color: white; }
+        .rank-badge { font-size: 10px; background: var(--navy); color: white; padding: 2px 8px; border-radius: 10px; margin-left: 10px; }
 
-        /* INTERACTIVE TABS */
-        .tab-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; }
-        .tab-btn { padding: 14px 35px; border: 1px solid #EEE; background: white; border-radius: 50px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 10px; transition: var(--transition); color: var(--navy); }
-        .tab-btn.active { color: white; border-color: transparent; transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        /* THE INTENT JOURNEY */
+        .journey-dashboard { background: var(--navy); color: white; padding: 50px; border-radius: 40px; margin-top: 40px; }
+        .journey-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; margin-top: 40px; }
+        .flow-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); position: relative; }
+        .flow-card i { font-size: 32px; color: var(--honey-gold); margin-bottom: 15px; display: block; }
+        .flow-card h5 { font-family: 'Poppins', sans-serif; font-size: 14px; text-transform: uppercase; margin-bottom: 10px; color: var(--honey-orange); }
+        .flow-card p { font-size: 12px; opacity: 0.8; }
+        .flow-card::after { content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -25px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.2); font-size: 20px; }
+        .flow-card:last-child::after { display: none; }
+
+        /* INTERACTIVE PILLARS */
+        .pillar-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        .tab-btn { padding: 14px 35px; border-radius: 50px; border: 1px solid #DDD; background: white; font-family: 'Poppins', sans-serif; font-weight: 700; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 10px; color: var(--navy); }
+        .tab-btn.active { color: white; border-color: transparent; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .tab-btn.shopee-btn.active { background: var(--shopee); }
         .tab-btn.tiktok-btn.active { background: var(--tiktok); }
 
-        .tab-content { display: none; animation: slideUp 0.5s ease; }
-        .tab-content.active { display: block; }
+        .tab-pane { display: none; animation: slideUp 0.5s ease; }
+        .tab-pane.active { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* CARDS & GRIDS */
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 30px; border-radius: 25px; border: 2px solid transparent; box-shadow: 0 5px 20px rgba(212,175,55,0.05); transition: 0.3s; height: 100%; position: relative; }
-        .card:hover { border-color: var(--honey-gold); transform: translateY(-5px); }
-        .card i { font-size: 35px; color: var(--honey-orange); margin-bottom: 20px; display: block; }
-        .card h3 { font-size: 22px; font-family: 'Poppins', sans-serif; color: var(--navy); margin-bottom: 15px; }
-        .card p { font-size: 16px; color: var(--text); line-height: 1.6; }
+        .strat-card { background: white; padding: 35px; border-radius: 30px; border: 2px solid transparent; box-shadow: 0 5px 20px rgba(212,175,55,0.05); transition: 0.3s; }
+        .strat-card:hover { border-color: var(--honey-gold); transform: translateY(-8px); }
+        .strat-card i { font-size: 40px; color: var(--honey-orange); margin-bottom: 20px; display: block; }
+        .strat-card h4 { font-family: 'Poppins', sans-serif; font-size: 24px; margin-bottom: 12px; color: var(--navy); }
+        .strat-card ul { list-style: none; }
+        .strat-card li { font-size: 15px; margin-bottom: 10px; display: flex; gap: 10px; color: var(--text); }
+        .strat-card li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--honey-gold); }
 
-        /* JOURNEY MAP */
-        .journey-map { display: flex; justify-content: space-between; background: var(--navy); padding: 40px; border-radius: 50px; margin: 30px 0; position: relative; color: white; border: 5px solid var(--white); }
-        .journey-step { text-align: center; flex: 1; position: relative; }
-        .journey-step i { font-size: 32px; color: var(--honey-gold); margin-bottom: 12px; }
-        .journey-step h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
-
-        /* SWARM LOGIC */
-        .swarm-section { background: white; border-radius: 40px; padding: 50px; border: 2px solid var(--cream); box-shadow: 0 10px 40px rgba(0,0,0,0.02); }
-        .swarm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
-        .swarm-item { border-left: 6px solid var(--honey-gold); padding-left: 25px; }
-        .swarm-item h3 { font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 10px; color: var(--navy); }
+        /* THE SWARM LOGIC */
+        .swarm-panel { background: white; border-radius: 40px; padding: 60px; margin-top: 50px; border: 1px solid #EEE; position: relative; }
+        .swarm-panel::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: linear-gradient(90deg, var(--honey-gold), var(--honey-orange)); border-radius: 40px 40px 0 0; }
+        .swarm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .swarm-stat { text-align: center; padding: 20px; background: var(--cream); border-radius: 20px; }
+        .swarm-stat h1 { font-size: 60px; color: var(--navy); margin-bottom: 5px; }
 
         /* FOOTER */
         footer { background: var(--navy); color: white; padding: 80px 8% 40px 8%; text-align: center; border-radius: 50px 50px 0 0; }
-        footer h2 { font-size: 3.5rem; color: var(--honey-gold); font-family: 'Poppins', sans-serif; margin-bottom: 15px; }
-        .cta-btn { background: var(--honey-orange); color: white; padding: 18px 50px; border-radius: 60px; text-decoration: none; font-weight: 800; font-size: 18px; margin-top: 40px; display: inline-block; transition: 0.3s; border: 2px solid transparent; }
+        .cta-btn { background: var(--honey-orange); color: white; padding: 20px 60px; border-radius: 60px; text-decoration: none; font-weight: 800; font-size: 18px; margin-top: 40px; display: inline-block; transition: 0.3s; border: 2px solid transparent; box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3); }
         .cta-btn:hover { background: transparent; border-color: var(--honey-gold); color: var(--honey-gold); transform: scale(1.05); }
 
-        /* BADGES */
-        .badge { background: var(--navy); color: white; padding: 4px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
-        .shopee-color { color: var(--shopee); }
-        .tiktok-color { color: var(--tiktok); }
-
-        @media (max-width: 900px) {
-            .platform-split, .card-grid, .swarm-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
-            .journey-map { flex-direction: column; gap: 40px; border-radius: 30px; }
-            nav { width: 90%; left: 5%; }
+        .shopee-text { color: var(--shopee); font-weight: 800; }
+        .tiktok-text { color: var(--tiktok); font-weight: 800; }
+        
+        @media (max-width: 1000px) {
+            .dashboard-grid, .tab-pane, .swarm-grid, .journey-flow { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+            nav { width: 96%; left: 2%; padding: 0 15px; }
         }
     </style>
 </head>
@@ -154,173 +160,206 @@
             <img src="https://www.madurasa.co.id/wp-content/uploads/2022/01/Logo_Madurasa_Resized.png" class="logo-brand" alt="Madurasa">
         </div>
         <div class="nav-links">
-            <a href="#audit">Audit</a>
-            <a href="#journey">Journey</a>
-            <a href="#pillars">Pillars</a>
-            <a href="#swarm">Swarm</a>
+            <a href="#audit">The Audit</a>
+            <a href="#intent">The Intent</a>
+            <a href="#battle">Battle Plan</a>
+            <a href="#swarm">The Swarm</a>
         </div>
         <img src="https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/9a8b8496cde4c7c28571b7c676819468.png" class="logo-agency" alt="Clabstream">
     </nav>
 
-    <div class="honey-drip" style="left: 10%;"></div>
+    <div class="honey-drip" style="left: 12%;"></div>
 
     <!-- HERO -->
     <header class="hero">
-        <div class="honey-blob" style="width: 600px; height: 600px; top: 0; right: -100px;"></div>
-        <h4 style="color: var(--honey-gold); letter-spacing: 10px; font-weight: 800; font-size: 16px; margin-bottom: 10px;">RECLAIMING RANK #1</h4>
+        <div class="honey-blob" style="width: 500px; height: 500px; top: -50px; right: -50px;"></div>
+        <h4>STRATEGY HUB 2026-2027</h4>
         <h1>The Hive <span class="highlight">of Growth.</span></h1>
-        <p style="font-weight: 700; color: var(--navy); margin-top: 15px; font-size: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">Madurasa Omnichannel Dominance Strategy 2026-2027 by Clabstream</p>
+        <p style="font-weight: 700; color: var(--navy); margin-top: 20px; font-size: 1.6rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+            Reclaiming Official Authority: Reversing the Sting of Simba Store & Viva Apotik
+        </p>
     </header>
 
     <!-- COMPETITIVE AUDIT BOARD -->
     <section id="audit">
         <h2 class="section-title">The Competitive Sting</h2>
-        <p style="font-weight: 700; font-size: 1.2rem; margin-bottom: 35px; max-width: 900px;">The Air Mancur Store is currently being out-ranked. We aren't just losing sales; we're losing the "First Click" to agile retailers.</p>
+        <p style="font-weight: 700; font-size: 1.3rem; color: var(--text); margin-bottom: 40px; max-width: 900px;">
+            Primary Challenge: We are losing the <b>"Search Shelf"</b>. Resellers are harvesting our high-intent traffic while we sit on the official sidelines.
+        </p>
         
-        <div class="audit-board">
-            <div class="platform-split">
-                <!-- Shopee -->
-                <div class="rival-box">
-                    <h4><i class="fa-brands fa-shopee shopee-color"></i> Shopee: Search Dominance</h4>
-                    <div class="bar-row">
-                        <div class="bar-info"><span>Simba Store (The Predator)</span><span>Rank #1</span></div>
-                        <div class="bar-track"><div class="bar-fill" style="width: 95%; background: var(--shopee);">95% Visibility</div></div>
-                    </div>
-                    <div class="bar-row">
-                        <div class="bar-info"><span>Air Mancur (Official)</span><span>Rank #3</span></div>
-                        <div class="bar-track"><div class="bar-fill" style="width: 50%; background: #DDD; color: #777;">50% Visibility</div></div>
-                    </div>
-                    <p style="font-size: 13px; margin-top: 15px; color: #555;"><b>Audit:</b> Simba wins via aggressive keyword bidding. We reclaim this via Mandatory Keyword Hijacking and Mall Certification.</p>
+        <div class="dashboard-grid">
+            <!-- Shopee Rank -->
+            <div class="rank-card">
+                <h3><i class="fa-brands fa-shopee shopee-text"></i> Shopee Battleground</h3>
+                <div class="rank-list">
+                    <div class="rank-item"><span class="rank-num">1</span> Simba Official Shop <span class="rank-badge">Predator</span></div>
+                    <div class="rank-item"><span class="rank-num">2</span> Apotik Store </div>
+                    <div class="rank-item"><span class="rank-num">3-7</span> Unofficial Store</div>
+                    <div class="rank-item official"><span class="rank-num">8</span> Air Mancur Official Shop <span class="rank-badge" style="background:var(--honey-gold)">Target #1</span></div>
                 </div>
-                <!-- TikTok -->
-                <div class="rival-box">
-                    <h4><i class="fa-brands fa-tiktok tiktok-color"></i> TikTok: Sales Authority</h4>
-                    <div class="bar-row">
-                        <div class="bar-info"><span>Viva Apotik (Search Leader)</span><span>Rank #1</span></div>
-                        <div class="bar-track"><div class="bar-fill" style="width: 98%; background: #000;">98% Sales Dominance</div></div>
-                    </div>
-                    <div class="bar-row">
-                        <div class="bar-info"><span>Air Mancur (Official)</span><span>Rank #4</span></div>
-                        <div class="bar-track"><div class="bar-fill" style="width: 45%; background: #DDD; color: #777;">45% Sales Dominance</div></div>
-                    </div>
-                    <p style="font-size: 13px; margin-top: 15px; color: #555;"><b>Audit:</b> Viva wins through <b>Search SEO Authority</b> and Product Card intent. We reclaim this through the 100+ Affiliate Swarm.</p>
+                <p style="font-size: 13px; margin-top: 20px; color: #666; font-style: italic;">
+                    *Currently 8th in product card relevance. We are losing 75% of searchers who never scroll past the top 3.
+                </p>
+            </div>
+            <!-- TikTok Rank -->
+            <div class="rank-card">
+                <h3><i class="fa-brands fa-tiktok tiktok-text"></i> TikTok Battleground</h3>
+                <div class="rank-list">
+                    <div class="rank-item"><span class="rank-num">1</span> Viva Apotik <span class="rank-badge">Shelf Master</span></div>
+                    <div class="rank-item"><span class="rank-num">2</span> Simba Store</div>
+                    <div class="rank-item official"><span class="rank-num">3</span> Air Mancur Store <span class="rank-badge" style="background:var(--honey-gold)">Target #1</span></div>
+                    <div class="rank-item"><span class="rank-num">4</span> Healthy Shop X</div>
                 </div>
+                <p style="font-size: 13px; margin-top: 20px; color: #666; font-style: italic;">
+                    *Viva Apotik wins through Search SEO & Shop Tab authority, not just Live activity. We must break their shelf monopoly.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- INTENT JOURNEY TABS -->
-    <section id="journey" style="background: white; border-radius: 60px 60px 0 0;">
-        <h2 class="section-title">Winning the "First Click"</h2>
-        <div class="tab-nav">
-            <button class="tab-btn shopee-btn active" onclick="openTab(event, 'shopee-intent')"><i class="fa-brands fa-shopee"></i> Shopee Search</button>
-            <button class="tab-btn tiktok-btn" onclick="openTab(event, 'tiktok-intent')"><i class="fa-brands fa-tiktok"></i> TikTok Discovery</button>
-        </div>
-
-        <!-- SHOPEE JOURNEY -->
-        <div id="shopee-intent" class="tab-content active">
-            <div class="journey-map">
-                <div class="journey-step"><i class="fa-solid fa-magnifying-glass"></i><h5>Intent Search</h5></div>
-                <div class="journey-step"><i class="fa-solid fa-id-card"></i><h5>Product Card</h5></div>
-                <div class="journey-step"><i class="fa-solid fa-shield-halved"></i><h5>Mall Trust</h5></div>
-                <div class="journey-step"><i class="fa-solid fa-truck-ramp-box"></i><h5>Replenish</h5></div>
+    <!-- THE INTENT JOURNEY MAP -->
+    <section id="intent" style="background: white; border-radius: 60px 60px 0 0;">
+        <h2 class="section-title">The Search-to-Sale Journey</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto; font-size: 1.1rem;">
+            2026 shoppers are <b>Intent-Driven</b>. They don't browse; they search. If Air Mancur isn't the first result, the sale belongs to the reseller.
+        </p>
+        
+        <div class="journey-dashboard">
+            <div class="journey-flow">
+                <div class="flow-card">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h5>01. The Search</h5>
+                    <p>User types "Madu Jahe" or "Madurasa". Intent is 100%.</p>
+                </div>
+                <div class="flow-card">
+                    <i class="fa-solid fa-id-card"></i>
+                    <h5>02. Discovery</h5>
+                    <p>Product Cards appear. Eye scans for reviews & Mall Badge.</p>
+                </div>
+                <div class="flow-card">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <h5>03. Authority</h5>
+                    <p>User clicks the top-ranked Official Store result.</p>
+                </div>
+                <div class="flow-card">
+                    <i class="fa-solid fa-cart-check"></i>
+                    <h5>04. Conversion</h5>
+                    <p>Checkout completed via Official Fulfillment.</p>
+                </div>
             </div>
-            <div class="card" style="border-left: 8px solid var(--shopee);">
-                <h3>Shopee Play: Mandatory Bidding</h3>
-                <p>We will deploy <b>GMV Max bidding</b> on core keywords to force Air Mancur to Rank #1. We leverage the Mall Badge as the ultimate trust signal to divert high-intent traffic away from Simba Store. <b>Goal:</b> 100% search capture for "Madurasa" terms.</p>
-            </div>
-        </div>
-
-        <!-- TIKTOK JOURNEY -->
-        <div id="tiktok-intent" class="tab-content">
-            <div class="journey-map" style="background: var(--tiktok);">
-                <div class="journey-step"><i class="fa-solid fa-play"></i><h5>Content Scroll</h5></div>
-                <div class="journey-step"><i class="fa-solid fa-cart-shopping"></i><h5>Yellow Basket</h5></div>
-                <div class="journey-step"><i class="fa-solid fa-magnifying-glass-chart"></i><h5>Shop SEO</h5></div>
-                <div class="journey-step"><i class="fa-solid fa-bolt"></i><h5>Benefit Impulse</h5></div>
-            </div>
-            <div class="card" style="border-left: 8px solid var(--tiktok);">
-                <h3>TikTok Play: Out-Swarming Viva Apotik</h3>
-                <p>Viva wins through volume authority. We reclaim Rank #1 by flooding the TikTok search algorithm with 100+ affiliate entries. Every video links to the <b>Official Store Yellow Basket</b>, forcing TikTok to recognize us as the Category Leader.</p>
+            <div style="margin-top: 50px; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 30px; border: 1px dashed var(--honey-gold);">
+                <h3 style="color: var(--honey-gold); margin-bottom: 10px;">The Clabstream Maneuver</h3>
+                <p>We reclaim the <b>First Click</b> by optimizing Official SEO and deploying GMV Max ads that specifically target competitor-owned search terms.</p>
             </div>
         </div>
     </section>
 
-    <!-- STRATEGIC PILLARS -->
-    <section id="pillars">
-        <h2 class="section-title">The 4 Strategic Pillars</h2>
-        <div class="card-grid">
-            <!-- PILLAR 1 -->
-            <div class="card">
-                <i class="fa-solid fa-boxes-packing"></i>
-                <span class="badge">01. SKU Strategy</span>
-                <h3>Polarized Bundling</h3>
-                <p><span class="shopee-badge">Shopee</span> 3x PET Family Packs (Rp45k). Raising the AOV floor to improve ad efficiency.</p>
-                <p style="margin-top: 15px;"><span class="tiktok-badge">TikTok</span> Wellness Ritual Kits (Premium 910gr + Bamboo Accessories @ Rp199k).</p>
+    <!-- THE BATTLE PLAN (PILLARS) -->
+    <section id="battle">
+        <h2 class="section-title">The Hive Battle Plan</h2>
+        <div class="pillar-tabs">
+            <button class="tab-btn shopee-btn active" onclick="openTab(event, 'shopee-battle')"><i class="fa-brands fa-shopee"></i> Shopee Dominance</button>
+            <button class="tab-btn tiktok-btn" onclick="openTab(event, 'tiktok-battle')"><i class="fa-brands fa-tiktok"></i> TikTok Swarm</button>
+        </div>
+
+        <!-- SHOPEE TACTICS -->
+        <div id="shopee-battle" class="tab-pane active">
+            <div class="strat-grid">
+                <div class="strat-card">
+                    <i class="fa-solid fa-crosshairs"></i>
+                    <h4>Keyword Hijacking</h4>
+                    <p>Deploying <b>GMV Max bidding</b> on all "Simba" and "Viva" related keywords to ensure the Air Mancur Official Store appears as the #1 search suggestion.</p>
+                </div>
+                <div class="strat-card">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <h4>The Pantry Bundle</h4>
+                    <p>3x 150gr PET Pack (Rp45,000). Raising the AOV floor to make keyword bidding more profitable and drowning out low-ticket resellers.</p>
+                </div>
+                <div class="strat-card">
+                    <i class="fa-solid fa-video"></i>
+                    <h4>Kitchen Hack Videos</h4>
+                    <p>30 monthly Shopee Videos focused on "Sugar Replacement" trends. Every video is a direct portal to the Murni 150gr product card.</p>
+                </div>
+                <div class="strat-card">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <h4>Official Mall Defense</h4>
+                    <p>Aggressive use of Shopee Mall exclusive vouchers (Free Ship Min Rp0) to give shoppers a clear reason to choose Official over Simba.</p>
+                </div>
             </div>
-            <!-- PILLAR 2 -->
-            <div class="card">
-                <i class="fa-solid fa-clapperboard"></i>
-                <span class="badge">02. Content</span>
-                <h3>Visual Baiting</h3>
-                <p><span class="shopee-badge">Shopee</span> "Dapur Bunda" clips for pantry replenishment hacks.</p>
-                <p style="margin-top: 15px;"><span class="tiktok-badge">TikTok</span> 30 benefit-led videos targeting <b>Keranjang Kuning</b> conversion.</p>
-            </div>
-            <!-- PILLAR 3 -->
-            <div class="card">
-                <i class="fa-solid fa-tower-broadcast"></i>
-                <span class="badge">03. Liveshopping</span>
-                <h3>Conversion Swarm</h3>
-                <p><span class="shopee-badge">Shopee</span> Loyalty & Retention streams (Closing the search intent).</p>
-                <p style="margin-top: 15px;"><span class="tiktok-badge">TikTok</span> Bait (12s Sachet) <span>&rarr;</span> Close (Premium Jar) sales loop.</p>
-            </div>
-            <!-- PILLAR 4 -->
-            <div class="card">
-                <i class="fa-solid fa-users-viewfinder"></i>
-                <span class="badge">04. Growth Ads</span>
-                <h3>Keyword Dominance</h3>
-                <p><span class="shopee-badge">Shopee</span> Reclaiming the Search Shelf from Simba Store.</p>
-                <p style="margin-top: 15px;"><span class="tiktok-badge">TikTok</span> 100+ Affiliate Swarm to out-rank Viva Apotik authority.</p>
+        </div>
+
+        <!-- TIKTOK TACTICS -->
+        <div id="tiktok-battle" class="tab-pane">
+            <div class="strat-grid">
+                <div class="strat-card">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                    <h4>100+ Affiliate Swarm</h4>
+                    <p>Activating micro-wellness creators to flood the Shop Tab. More affiliate tags = higher organic Shop SEO authority than Viva Apotik.</p>
+                </div>
+                <div class="strat-card">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h4>Yellow Basket SEO</h4>
+                    <p>Optimizing <b>Keranjang Kuning</b> meta-data. We ensure our product cards are the #1 result when users search "Madu Asli" in the TikTok Shop tab.</p>
+                </div>
+                <div class="strat-card">
+                    <i class="fa-solid fa-gem"></i>
+                    <h4>Wellness Ritual Kits</h4>
+                    <p>Premium 910gr Royal Jelly + Bamboo Ritual Accessories (Rp199k). Selling the "Benefit Hook" that general pharmacies don't market.</p>
+                </div>
+                <div class="strat-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4>The Bait & Close Loop</h4>
+                    <p>Live Stream workflow: Bait with 12s Sachets (Rp14k) to spike traffic <span>&rarr;</span> Close with Premium Jars (Rp164k) to drive revenue.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- THE SWARM EXECUTION -->
     <section id="swarm">
-        <div class="swarm-section">
-            <h2 class="section-title" style="margin-bottom: 10px;">The Swarm: Affiliate Logic</h2>
-            <p style="font-weight: 700; margin-bottom: 40px;">How we reclaim the #1 TikTok Rank without 24/7 Live hours.</p>
+        <div class="swarm-panel">
+            <h2 class="section-title">Execution: The Affiliate Swarm</h2>
+            <p style="font-weight: 700; font-size: 1.2rem; margin-bottom: 40px; color: var(--navy);">
+                Reclaiming Rank #1 via Organic Authority, not just Live Hours.
+            </p>
             
             <div class="swarm-grid">
                 <div class="swarm-item">
-                    <h3>Organic Moat Strategy</h3>
-                    <p>By activating 100+ Micro-Wellness creators, we create a flood of authentic "Product Card" entries. TikTok's algorithm prioritizes the store with the most consistent affiliate tagging—effectively burying Viva Apotik's shelf authority.</p>
+                    <h3>The Organic Moat</h3>
+                    <p>By activating 100+ wellness creators to tag Madurasa, we create a flood of "Official Product" entries in the algorithm. This forces TikTok to recognize Air Mancur as the Category Leader, effectively burying Viva Apotik's shelf rank.</p>
                 </div>
                 <div class="swarm-item">
-                    <h3>SEO Search Dominance</h3>
-                    <p>We optimize our Yellow Basket descriptions with high-intent keywords ("Madu Murni", "Madu Jahe"). The combined power of Affiliate volume and Shop SEO ensures Air Mancur is the first result in the TikTok Shop Tab.</p>
+                    <div class="swarm-stat">
+                        <h1>100+</h1>
+                        <p style="font-weight: 800; color: var(--honey-orange);">Active Creators</p>
+                        <p style="font-size: 12px; margin-top: 5px;">Generating 300+ Product Tags Monthly</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CRM BRIDGE -->
-    <section>
-        <div class="card" style="background: var(--navy); color: white; text-align: center; padding: 60px; border: none;">
-            <h2 style="color: var(--honey-gold); font-family: 'Poppins', sans-serif;">The CRM Upsell Bridge</h2>
-            <p style="font-size: 1.4rem; opacity: 0.8; margin-top: 10px;">Sachet Buyer (Volume) <span>&rarr;</span> Premium Jar (Value)</p>
-            <div style="max-width: 700px; margin: 35px auto; padding: 25px; border: 2px dashed var(--honey-gold); border-radius: 30px;">
-                <p style="font-size: 1.2rem;"><b>The Automator:</b> 14 days after a Sachet purchase, a triggered voucher is sent: <b>"Level up your morning habit"</b> – 20% off the Premium 910gr Royal Jelly Jar. Converting sampler traffic into High-LTV customers.</p>
+    <section style="background: white; border-radius: 60px 60px 0 0;">
+        <div class="strat-card" style="background: var(--navy); color: white; text-align: center; padding: 60px; border: none;">
+            <h2 style="color: var(--honey-gold); font-family: 'Poppins', sans-serif; font-size: 40px;">The CRM Upsell Bridge</h2>
+            <p style="font-size: 1.4rem; opacity: 0.8; margin-top: 10px;">Sachet Volume <span>&rarr;</span> Premium Jar LTV</p>
+            <div style="max-width: 800px; margin: 40px auto; padding: 30px; border: 2px dashed var(--honey-gold); border-radius: 30px;">
+                <p style="font-size: 1.3rem;">
+                    <b>The Automator:</b> 14 days after a Sachet purchase, an automated CRM voucher is sent: 
+                    <br><span style="color: var(--honey-orange); font-weight: 800;">"LEVEL UP YOUR HEALTH"</span> 
+                    <br>20% Off Premium 910gr Royal Jelly. Converting impulse buyers into loyal subscribers.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <h2>Stay Sticky. Grow Big.</h2>
-        <p style="margin-top: 10px; opacity: 0.6; font-size: 1.1rem;">Omnichannel Performance Strategy for Madurasa 2026-2027</p>
-        <a href="mailto:digital.growth@clabstream.com" class="cta-btn">Initiate The Swarm</a>
-        <div style="margin-top: 50px; font-size: 11px; opacity: 0.5;">
+        <h2 style="font-size: 3.5rem;">Stay Sticky. Grow Big.</h2>
+        <p style="margin-top: 15px; opacity: 0.7; font-size: 1.3rem;">PT Air Mancur x Madurasa x Clabstream 2026-2027</p>
+        <a href="mailto:digital.growth@clabstream.com" class="cta-btn">Initiate The Battle Plan</a>
+        <div style="margin-top: 60px; font-size: 11px; opacity: 0.5;">
             <div class="nav-logos" style="justify-content: center; margin-bottom: 25px; filter: grayscale(1);">
                 <img src="https://www.airmancur.co.id/assets/images/logo-am_w221_h30.png.webp" class="logo-am">
                 <img src="https://www.madurasa.co.id/wp-content/uploads/2022/01/Logo_Madurasa_Resized.png" class="logo-brand">
@@ -332,17 +371,17 @@
     <script>
         // TABS LOGIC
         function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
+            var i, tabpane, tablinks;
+            tabpane = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabpane.length; i++) {
+                tabpane[i].style.display = "none";
+                tabpane[i].classList.remove("active");
             }
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).style.display = "grid";
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
